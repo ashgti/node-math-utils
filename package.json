@@ -1,0 +1,14 @@
+{ "name" : "math.utils"
+, "version" : "0.0.1"
+, "description" : "Math Utilities not provided by the javascript Math object."
+, "author": "John Harrison"
+, "main": "./math.utils"
+, "scripts": { "test": "make test"
+             , "install": "node-waf configure build" 
+             }
+, "licesnes" : 
+    [ { "type" : "MIT"
+      , "url" : "http://github.com/ashgti/node-math-utils/raw/master/LICENSE"
+      }
+    ]
+}
