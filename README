@@ -1,0 +1,8 @@
+This is a library to add some mathmatics utlity functions
+to Node.js.
+
+Random Number Generators:
+  Random(seed) -- uniformly distributed psuedo random number generator from [0.0, 1.0)
+  UniformRandom(min, max, seed) -- generates uniformly distrubted random numbers from min to max
+  ExponentialRandom(lambda, seed) -- generats an exponentially distributed random number from 0 to Inf but the mean is lambda. 
+
