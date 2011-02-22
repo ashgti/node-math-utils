@@ -2,7 +2,6 @@
 #include <node_buffer.h>
 #include <iostream>
 #include <cstdlib>
-#include "math_utils.h"
 
 using namespace v8;
 using namespace std;
@@ -39,12 +38,13 @@ static Handle<Value> UniformRandom(const Arguments& args) {
         d_max = 1.0;
     }
 
+    /* Magic happens here */
+    /*  TODO: Port this to windows, since erand48 and friends 
+     *    are not in windows */
     double result = (erand48(seed_data.seed_data_us) * (d_max - d_min)) + d_min;
     
     return scope.Close(Number::New(result));
 }
-
-/* Range */
 
 extern "C" void
 init (Handle<Object> target) {
